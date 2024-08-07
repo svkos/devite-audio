@@ -4,5 +4,8 @@
     "useTabs": false,
     "arrowParens": "always",
     "trailingComma": "all",
-    "singleQuote": false
+    "singleQuote": false,
+    "plugins": ["@trivago/prettier-plugin-sort-imports"],
+    "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+    "importOrderSeparation": false
 }

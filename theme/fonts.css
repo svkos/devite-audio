@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Akrobat ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    src:
+        local("Akrobat ExtraBold"),
+        url("./font/akrobat-extrabold-webfont.otf") format("woff");
+}
