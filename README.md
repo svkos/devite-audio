@@ -1,5 +1,4 @@
-# Mantine Next Template
+# Devite Audio Configurator
 
-Get started with the template by clicking `Use this template` button on the top of the page.
-
-[Documentation](https://mantine.dev/guides/next/)
+This web app based on Next.js, Mantine.
+Production version is here https://configurator.deviteaudio.ru
