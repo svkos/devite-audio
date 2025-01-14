@@ -7,15 +7,15 @@ import { stageToPDF } from "@organisms/Configurator/helper";
 import { orderState, requestOrderStatusState, stepState } from "@store/store";
 import { MAIN_BREAKPOINT } from "@templates/constants";
 import { Form, Steps } from "@type/all";
-import jsPDF from "jspdf";
 import Konva from "konva";
 import dynamic from "next/dynamic";
 import { forwardRef, useRef } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import { getFilledOrderPdf } from "./helper";
 
 export const FormStep = () => {
     const setStep = useSetRecoilState(stepState);
-    const [state] = useRecoilState(orderState);
+    const [order] = useRecoilState(orderState);
     const [, setStatus] = useRecoilState(requestOrderStatusState);
 
     const stageRef = useRef<Konva.Stage>(null);
@@ -47,26 +47,20 @@ export const FormStep = () => {
     const submit = async () => {
         setStatus("loading");
 
-        const file = stageToPDF(stageRef);
-        const isSuccess = await sendOrder(file);
+        const appearancePdf = stageToPDF(stageRef)?.output("blob");
+        const orderPdf = await getFilledOrderPdf(order, form.getValues().name);
+        const isSuccess = await sendOrder(orderPdf, appearancePdf);
 
         isSuccess && setStep(Steps.Success);
     };
 
-    const sendOrder = async (file?: jsPDF) => {
-        if (!file) {
-            return false;
+    const sendOrder = async (orderPdf: Blob, appearancePdf?: Blob) => {
+        let formData = new FormData();
+        if (appearancePdf) {
+            formData.append("appearanceFile", appearancePdf);
         }
-
-        const order = {
-            ...state,
-            left: { ...state.left, logoImg: "" },
-            right: { ...state.right, logoImg: "" },
-        };
-
-        var formData = new FormData();
-        formData.append("file", file.output("blob"));
-        formData.append("order", JSON.stringify({ ...order, ...form.getValues() }));
+        formData.append("orderFile", orderPdf);
+        formData.append("order", JSON.stringify({ ...form.getValues() }));
 
         const response = await fetch("/send-order.php", {
             method: "POST",

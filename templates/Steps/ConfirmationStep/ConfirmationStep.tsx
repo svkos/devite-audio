@@ -181,7 +181,7 @@ const getLogoDevitePriceString = (lr: LR, order: OrderType) => {
     return price > 0 ? `+${price}₽` : "Включено";
 };
 
-const getTopString = (lr: LR, order: OrderType) => {
+export const getTopString = (lr: LR, order: OrderType) => {
     const type = order[lr].topType;
     const label = {
         [TopType.Transparent]: "Проз.",
@@ -195,7 +195,7 @@ const getTopString = (lr: LR, order: OrderType) => {
     return `${label[type]}/${name}`;
 };
 
-const getLogoDevite = (lr: LR, order: OrderType) => {
+export const getLogoDevite = (lr: LR, order: OrderType) => {
     const type = order[lr].logoDevite.type;
     const color = order[lr].logoDevite.color;
     if (type && color) {
