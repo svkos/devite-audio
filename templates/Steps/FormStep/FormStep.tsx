@@ -35,8 +35,8 @@ export const FormStep = () => {
         clearInputErrorOnChange: true,
         validate: {
             name: isNotEmpty("Обязательное поле"),
-            phone: (value) => (/^[0-9]{10,12}$/.test(value) ? null : "Неверный номер"),
-            email: (value) => (/^\S+@\S+\.\S+$/.test(value) ? null : "Неверный имейл"),
+            phone: isNotEmpty("Обязательное поле"),
+            email: (value) => (/^\S+@\S+\.\S+$/.test(value.trim()) ? null : "Неверный имейл"),
             city: isNotEmpty("Обязательное поле"),
             pvz: isNotEmpty("Обязательное поле"),
             personal: (value) => (value === false ? "Обязательное поле" : null),
