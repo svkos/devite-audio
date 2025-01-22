@@ -11,6 +11,7 @@ import Konva from "konva";
 import dynamic from "next/dynamic";
 import { forwardRef, useRef } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import { getTotalPrice } from "utils/price";
 import { getFilledOrderPdf } from "./helper";
 
 export const FormStep = () => {
@@ -60,7 +61,10 @@ export const FormStep = () => {
             formData.append("appearanceFile", appearancePdf);
         }
         formData.append("orderFile", orderPdf);
-        formData.append("order", JSON.stringify({ ...form.getValues() }));
+        formData.append(
+            "order",
+            JSON.stringify({ ...form.getValues(), price: getTotalPrice(order) }),
+        );
 
         const response = await fetch("/send-order.php", {
             method: "POST",
