@@ -10,7 +10,7 @@ export const ModelCustomize = () => {
     return (
         <>
             <Row>{models[model].description}</Row>
-            <Row title="Тип драйверов / количество:">{`${models[model].type} сбалансированных арматурных драйвера`}</Row>
+            <Row title="Тип драйверов / количество:">{`${models[model].pluralType}`}</Row>
             <Row title="Конфигурация драйверов:">{models[model].config}</Row>
             <Row title="Подойдет:">{models[model].whom}</Row>
         </>
