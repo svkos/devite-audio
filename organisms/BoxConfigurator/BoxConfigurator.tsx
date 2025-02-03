@@ -13,7 +13,7 @@ export const BoxConfigurator = ({ text }: { text: string }) => {
     const stageWidth = SCENE_WIDTH * scale;
     const stageScale = { x: scale, y: scale };
 
-    const [box] = useImage(boxImg.src);
+    const [box] = useImage(boxImg.src, 'anonymous');
 
     return (
         <Box ref={ref} w="100%">

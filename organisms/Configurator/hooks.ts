@@ -20,22 +20,22 @@ export const useConfiguratorImages = () => {
     const configLeft = useRecoilValue(phonesConfigState).left;
     const configRight = useRecoilValue(phonesConfigState).right;
 
-    const [bgLeft] = useImage(bgLeftImg.src);
-    const [baseLeft] = useImage(baseLeftImg.src);
-    const [topLeft] = useImage(topLeftImg.src);
-    const [baseTopLeft] = useImage(baseTopLeftImg.src);
-    const [knowlesLeft] = useImage(knowlesLeftImg.src);
-    const [logoLeftImg] = useImage(configLeft.logo ?? "");
+    const [bgLeft] = useImage(bgLeftImg.src, 'anonymous');
+    const [baseLeft] = useImage(baseLeftImg.src, 'anonymous');
+    const [topLeft] = useImage(topLeftImg.src, 'anonymous');
+    const [baseTopLeft] = useImage(baseTopLeftImg.src, 'anonymous');
+    const [knowlesLeft] = useImage(knowlesLeftImg.src, 'anonymous');
+    const [logoLeftImg] = useImage(configLeft.logo ?? "", 'anonymous');
 
-    const [bgRight] = useImage(bgRightImg.src);
-    const [baseRight] = useImage(baseRightImg.src);
-    const [topRight] = useImage(topRightImg.src);
-    const [baseTopRight] = useImage(baseTopRightImg.src);
-    const [knowlesRight] = useImage(knowlesRightImg.src);
-    const [logoRightImg] = useImage(configRight.logo ?? "");
+    const [bgRight] = useImage(bgRightImg.src, 'anonymous');
+    const [baseRight] = useImage(baseRightImg.src, 'anonymous');
+    const [topRight] = useImage(topRightImg.src, 'anonymous');
+    const [baseTopRight] = useImage(baseTopRightImg.src, 'anonymous');
+    const [knowlesRight] = useImage(knowlesRightImg.src, 'anonymous');
+    const [logoRightImg] = useImage(configRight.logo ?? "", 'anonymous');
 
-    const [logoDeviteSilver] = useImage(logoMetal.src);
-    const [logoDeviteGold] = useImage(logoGold.src);
+    const [logoDeviteSilver] = useImage(logoMetal.src, 'anonymous');
+    const [logoDeviteGold] = useImage(logoGold.src, 'anonymous');
 
     if (
         !bgLeft ||

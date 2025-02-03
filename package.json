@@ -5,10 +5,11 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "build_cdn": "IS_CDN=true next build",
         "start": "next start",
         "lint": "next lint && tsc --noEmit",
         "deploy": "node deploy-ftp",
-        "release": "yarn build && yarn deploy"
+        "release": "yarn build_cdn && yarn deploy"
     },
     "dependencies": {
         "@mantine/core": "7.10.0",

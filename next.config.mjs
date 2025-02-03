@@ -1,3 +1,5 @@
+const isCDN = process.env.IS_CDN === 'true';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // reactStrictMode: true,
@@ -12,7 +14,8 @@ const nextConfig = {
   },
   eslint: {
     dirs: ['.']
-  }
+  },
+  assetPrefix: isCDN ? process.env.CDN_URL : '',
 };
 
 export default nextConfig;
