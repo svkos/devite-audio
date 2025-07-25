@@ -20,8 +20,8 @@ import purpleRight from "../assets/perl/base-top-right-purple.png";
 import redRight from "../assets/perl/base-top-right-red.png";
 import turquoiseRight from "../assets/perl/base-top-right-turquoise.png";
 import yellowRight from "../assets/perl/base-top-right-yellow.png";
-import carbonLeft from "../assets/texture/base-top-left-carbon.png";
-import mammothLeft from "../assets/texture/base-top-left-mammoth.png";
+import silverLeft from "../assets/texture/base-top-left-silver.png";
+import goldLeft from "../assets/texture/base-top-left-gold.png";
 import pearl1Left from "../assets/texture/base-top-left-pearl1.png";
 import pearl2Left from "../assets/texture/base-top-left-pearl2.png";
 import wood1Left from "../assets/texture/base-top-left-wood1.png";
@@ -32,8 +32,8 @@ import wood5Left from "../assets/texture/base-top-left-wood5.png";
 import wood6Left from "../assets/texture/base-top-left-wood6.png";
 import woodGB1Left from "../assets/texture/base-top-left-woodgb1.png";
 import woodGB2Left from "../assets/texture/base-top-left-woodgb2.png";
-import carbonRight from "../assets/texture/base-top-right-carbon.png";
-import mammothRight from "../assets/texture/base-top-right-mammoth.png";
+import silverRight from "../assets/texture/base-top-right-silver.png";
+import goldRight from "../assets/texture/base-top-right-gold.png";
 import pearl1Right from "../assets/texture/base-top-right-pearl1.png";
 import pearl2Right from "../assets/texture/base-top-right-pearl2.png";
 import wood1Right from "../assets/texture/base-top-right-wood1.png";
@@ -51,8 +51,8 @@ type ConfiguratorLogoProps = {
 };
 
 export const textureConfiguratorImageLeft = {
-    [Texture.Carbon]: carbonLeft.src,
-    [Texture.Mammoth]: mammothLeft.src,
+    [Texture.Silver]: silverLeft.src,
+    [Texture.Gold]: goldLeft.src,
     [Texture.Pearl1]: pearl1Left.src,
     [Texture.Pearl2]: pearl2Left.src,
     [Texture.Wood1]: wood1Left.src,
@@ -75,8 +75,8 @@ export const textureConfiguratorImageLeft = {
 };
 
 export const textureConfiguratorImageRight = {
-    [Texture.Carbon]: carbonRight.src,
-    [Texture.Mammoth]: mammothRight.src,
+    [Texture.Silver]: silverRight.src,
+    [Texture.Gold]: goldRight.src,
     [Texture.Pearl1]: pearl1Right.src,
     [Texture.Pearl2]: pearl2Right.src,
     [Texture.Wood1]: wood1Right.src,

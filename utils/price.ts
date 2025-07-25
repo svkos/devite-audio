@@ -64,13 +64,13 @@ export const getTexturePrice = (lr: LR, order: OrderType) => {
         price += 1000;
     }
 
-    // Мамонт - 1500 руб наушник
-    if (order[lr].topTexture === Texture.Mammoth) {
-        price += 1500;
+    // Серебро - 500 руб наушник
+    if (order[lr].topTexture === Texture.Silver) {
+        price += 500;
     }
 
-    // карбон - 500 руб наушник
-    if (order[lr].topTexture === Texture.Carbon) {
+    // Золото - 500 руб наушник
+    if (order[lr].topTexture === Texture.Gold) {
         price += 500;
     }
 

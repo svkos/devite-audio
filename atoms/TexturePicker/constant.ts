@@ -1,5 +1,5 @@
-import carbon from "./assets/carbon.png";
-import mammoth from "./assets/mammoth.png";
+import silver from "./assets/silver.png";
+import gold from "./assets/gold.png";
 import pearl1 from "./assets/pearl1.png";
 import pearl2 from "./assets/pearl2.png";
 import wood1 from "./assets/wood1.png";
@@ -22,8 +22,8 @@ import yellow from "./assets/yellow.png";
 
 
 export enum Texture {
-    Carbon = "Карбон",
-    Mammoth = "Мамонт",
+    Silver = "Серебро",
+    Gold = "Золото",
     Pearl1 = "Перламутр",
     Pearl2 = "Галиотис",
     Wood1 = "Дерево 1",
@@ -45,8 +45,8 @@ export enum Texture {
 }
 
 export const textureImage = {
-    [Texture.Carbon]: carbon.src,
-    [Texture.Mammoth]: mammoth.src,
+    [Texture.Silver]: silver.src,
+    [Texture.Gold]: gold.src,
     [Texture.Pearl1]: pearl1.src,
     [Texture.Pearl2]: pearl2.src,
     [Texture.Wood1]: wood1.src,

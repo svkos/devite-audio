@@ -39,8 +39,8 @@ export const topColorsType = {
 const topTexturePremium = [
     Texture.Pearl2,
     Texture.Pearl1,
-    Texture.Carbon,
-    Texture.Mammoth,
+    Texture.Silver,
+    Texture.Gold,
     Texture.Wood1,
     Texture.Wood2,
     Texture.Wood3,
